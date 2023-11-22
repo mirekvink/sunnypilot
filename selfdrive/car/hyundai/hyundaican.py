@@ -44,6 +44,9 @@ def create_lkas11(packer, frame, car_fingerprint, apply_steer, steer_req,
     values["CF_Lkas_LdwsActivemode"] = int(left_lane) + (int(right_lane) << 1)
     values["CF_Lkas_LdwsOpt_USM"] = 2
 
+    ## Let's see if this removes the error                       
+    values["CF_Lkas_FusionState"] = 0
+
     # FcwOpt_USM 5 = Orange blinking car + lanes
     # FcwOpt_USM 4 = Orange car + lanes
     # FcwOpt_USM 3 = Green blinking car + lanes
